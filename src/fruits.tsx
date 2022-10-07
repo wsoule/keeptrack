@@ -1,17 +1,10 @@
-export function FruitList(props: { fruits: { id: number; name: string; }[]; }) {
+export function FruitListItem(props : any): JSX.Element{
+  return <li>{props.fruit.name}</li>
+}
+
+export function FruitList(props: { fruits: { id: number; name: string; }[]; }): JSX.Element {
   const fruitListItems = props.fruits.map((fruit: { id: number; name: string; }) => (
-    <li key={fruit.id}>{fruit.name}</li>
+    <FruitListItem key={fruit.id} fruit={fruit} />
   ));
   return <ul>{fruitListItems}</ul>;
 }
-
-export function addFruit(list: { appendChild: (arg0: JSX.Element) => void; }){
-  list.appendChild(createFruit());
-}
-
-function createFruit(){
-  const fruitAdd = prompt('Fruit to add');
-  return <li>{fruitAdd}</li>;
-}
-// ReactDOM.createRoot(document.getElementById('root')).render(
-// )

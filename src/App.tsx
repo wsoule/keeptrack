@@ -9,7 +9,7 @@ function App() {
    <div className='container'>
     {/* <Hello name='Elvis' enthusiasmLevel={2} /> */}
     {/* <ProjectsPage /> */}
-    <FruitList fruits={data} />
+     <FruitList fruits={data} /> 
 
    </div>
   );
