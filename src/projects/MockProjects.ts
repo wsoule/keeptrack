@@ -1,4 +1,4 @@
-import { Project } from "./Project";
+import { Project } from './Project';
 
 export const MOCK_PROJECTS = [
   new Project({
@@ -10,7 +10,7 @@ export const MOCK_PROJECTS = [
     contractTypeId: 3,
     contractSignedOn: '2013-08-04T22:39:41.473Z',
     budget: 54637,
-    isActive: false,
+    isActive: false
   }),
   new Project({
     id: 2,
@@ -21,7 +21,7 @@ export const MOCK_PROJECTS = [
     contractTypeId: 4,
     contractSignedOn: '2012-08-06T21:21:31.419Z',
     budget: 91638,
-    isActive: true,
+    isActive: true
   }),
   new Project({
     id: 3,
@@ -32,7 +32,7 @@ export const MOCK_PROJECTS = [
     contractTypeId: 6,
     contractSignedOn: '2016-06-26T18:24:01.706Z',
     budget: 29729,
-    isActive: true,
+    isActive: true
   }),
   new Project({
     id: 4,
@@ -43,7 +43,7 @@ export const MOCK_PROJECTS = [
     contractTypeId: 4,
     contractSignedOn: '2013-05-26T01:10:42.344Z',
     budget: 45660,
-    isActive: true,
+    isActive: true
   }),
   new Project({
     id: 5,
@@ -54,7 +54,7 @@ export const MOCK_PROJECTS = [
     contractTypeId: 2,
     contractSignedOn: '2009-12-18T21:46:47.944Z',
     budget: 81188,
-    isActive: true,
+    isActive: true
   }),
   new Project({
     id: 6,
@@ -65,6 +65,6 @@ export const MOCK_PROJECTS = [
     contractTypeId: 3,
     contractSignedOn: '2016-09-23T21:27:25.035Z',
     budget: 53407,
-    isActive: false,
-  }),
-]
+    isActive: false
+  })
+];
