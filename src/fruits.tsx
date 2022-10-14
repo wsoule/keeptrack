@@ -1,5 +1,3 @@
-import React from 'react';
-
 export function FruitListItem(props : any) : JSX.Element{
   function handleClick(e: any, id: number) : void {
     console.log(e);
