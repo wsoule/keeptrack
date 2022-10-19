@@ -1,4 +1,7 @@
-# Getting Started with Create React App
+# Project is a tutorial from `HandsOnReact`
+View tutorial [here](https://handsonreact.com/docs/).
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
