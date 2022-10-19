@@ -1,10 +1,6 @@
-//import { Project } from './Project';
-/*
-interface ProjectFormProps {
-  project: Project
-}
-*/
-function ProjectForm(): JSX.Element {
+import { FC } from 'react';
+
+export const ProjectForm: FC = () => {
   return (
     <form className='input-group vertical'>
       <label htmlFor='name'>Project Name</label>
@@ -19,11 +15,10 @@ function ProjectForm(): JSX.Element {
       <input type='checkbox' name='isActive' />
 
       <div className='input-group'>
-        <button className='primary bordered medium'>Save</button>
+        <button type='button' className='primary bordered medium'>Save</button>
         <span></span>
         <button type='button' className='bordered medium'>Cancel</button>
       </div>
     </form>
   );
-}
-export default ProjectForm;
+};

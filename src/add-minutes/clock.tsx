@@ -1,28 +1,47 @@
-import React from 'react';
+import { FC, useEffect, useState } from 'react';
 
-function changeMinutes(date: Date, minutes: number): Date {
-  // multiply minutes by 6000 is to convert minutes to milliseconds
-  return new Date(date.getTime() + minutes * 60000);
-}
+export const Clock: FC = () => {
+  const [time, setTime] = useState(new Date().toLocaleTimeString());
 
-export function Clock(): JSX.Element {
-  const [time, setTime] = React.useState(new Date());
+  useEffect(() => {
+    const timerID = setInterval(refresh, 1000);
+    return () => {
+      clearInterval(timerID);
+    };
+  }, []);
 
-  const handleClick1 = (): void => {
-    setTime(changeMinutes(time, 10));
-  };
-  const handleClick2 = (): void => {
-    setTime((previousState) => changeMinutes(previousState, -10));
-  };
   const refresh = (): void => {
-    setTime(new Date());
+    setTime(new Date().toLocaleTimeString());
   };
+
   return (
     <div>
-      <p>{time.toLocaleString()}</p>
-      <button onClick={handleClick2}>- 10 Minutes</button>
-      <button onClick={refresh}>Refresh</button>
-      <button onClick={handleClick1}>+ 10 Minutes</button>
+      <p>{time}</p>
     </div>
   );
-}
+};
+
+export const DropdownMenu: FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleClick = (): void => {
+    setIsOpen((currentIsOpen) => !currentIsOpen);
+  };
+
+  let menu;
+  if (isOpen) {
+    menu = (
+      <ul>
+        <li>Edit</li>
+        <li>Remove</li>
+        <li>Archive</li>
+      </ul>
+    );
+  }
+  return (
+    <div>
+      <button onClick={handleClick}>Actions</button>
+      {menu}
+    </div>
+  );
+};

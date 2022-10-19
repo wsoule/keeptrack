@@ -1,13 +1,13 @@
 import './App.css';
-// import ProjectsPage from './projects/ProjectsPage';
-import { Clock } from './add-minutes/clock';
-
+// import { ProjectsPage } from './projects/ProjectsPage';
+import { Clock, DropdownMenu } from './add-minutes/clock';
 
 function App(): JSX.Element {
   return (
     <div className='container'>
-      {/*<ProjectsPage /> */}
+      {/*<ProjectsPage />*/}
       <Clock />
+      <DropdownMenu />
     </div>
   );
 }

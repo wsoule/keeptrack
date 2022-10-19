@@ -1,4 +1,4 @@
-import React from 'react';
+import { FC } from 'react';
 import { Project } from './Project';
 
 function formatDescription(description: string): string {
@@ -10,8 +10,7 @@ interface ProjectCardProps {
   project: Project
 }
 
-function ProjectCard(props: ProjectCardProps): JSX.Element {
-  const { project } = props;
+export const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
   const handleEditClick = (projectBeingEdited: Project): void => {
     console.log(projectBeingEdited);
   };
@@ -36,6 +35,4 @@ function ProjectCard(props: ProjectCardProps): JSX.Element {
       </section>
     </div>
   );
-}
-
-export default ProjectCard;
+};
