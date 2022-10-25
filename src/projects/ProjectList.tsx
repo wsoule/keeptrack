@@ -8,14 +8,19 @@ interface ProjectListProps {
 }
 
 export const ProjectList: FC<ProjectListProps> = ({ projects }) => {
-  return (
-    <div className="row">
-      {projects.map((project) => (
-        <div key={project.id} className="cols-sm">
-          <ProjectCard project={project}></ProjectCard>
-          <ProjectForm />
-        </div>
-      ))}
+  const handleEdit = (project: Project): void => {
+    console.log(project);
+  };
+  const items = projects.map((project) => (
+    <div key={project.id} className="cols-sm">
+      <ProjectCard
+        project={project}
+        onEdit={handleEdit}
+      ></ProjectCard>
+      <ProjectForm></ProjectForm>
     </div>
+  ));
+  return (
+    <div className="row">{items}</div>
   );
 };
