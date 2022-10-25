@@ -45,3 +45,40 @@ export const DropdownMenu: FC = () => {
     </div>
   );
 };
+
+interface buttonProps {
+  onClickFunction: () => void;
+  number: string;
+}
+
+interface resultsProps {
+  value: number;
+}
+
+const Button: FC<buttonProps> = ({ onClickFunction, number }) => {
+  return <button onClick={onClickFunction}>{number}</button>;
+};
+
+const Result: FC<resultsProps> = ({ value }) => {
+  return <div>Result: {value}</div>;
+};
+
+export const Counting: FC = () => {
+  const [counter, setCounter] = useState(0);
+
+  const incrementCounter = (): void => {
+    setCounter((previousCounter) => previousCounter + 1);
+  };
+
+  const decrementCounter = (): void => {
+    setCounter((previousCounter) => previousCounter - 1);
+  };
+
+  return (
+    <div>
+      <Button onClickFunction={decrementCounter} number={'-1'} />
+      <Button onClickFunction={incrementCounter} number={'+1'} />
+      <Result value={counter} />
+    </div>
+  );
+};
