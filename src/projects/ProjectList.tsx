@@ -19,9 +19,15 @@ export const ProjectList: FC<ProjectListProps> = ({ projects, onSave }) => {
   const items = projects.map((project) => (
     <div key={project.id} className="cols-sm">
       {project === projectBeingEdited ? (
-        <ProjectForm onSave={onSave} onCancel={cancelEditing} />
+        <ProjectForm
+          onSave={onSave}
+          onCancel={cancelEditing}
+        />
       ) : (
-        <ProjectCard project={project} onEdit={handleEdit} />
+        <ProjectCard
+          project={project}
+          onEdit={handleEdit}
+        />
       )}
     </div>
   ));

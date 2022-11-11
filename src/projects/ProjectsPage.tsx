@@ -10,7 +10,10 @@ export const ProjectsPage: FC = () => {
   return (
     <>
       <h1>Projects</h1>
-      <ProjectList projects={MOCK_PROJECTS} onSave={saveProject} />
+      <ProjectList
+        projects={MOCK_PROJECTS}
+        onSave={saveProject}
+      />
     </>
   );
 };
