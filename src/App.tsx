@@ -1,10 +1,12 @@
 import './App.css';
-import { ProjectsPage } from './projects/ProjectsPage';
+// import { ProjectsPage } from './projects/ProjectsPage';
+import { SinginForm } from './extra/forms/form';
 
 function App(): JSX.Element {
   return (
     <div className='container'>
-      <ProjectsPage />
+      {/*<ProjectsPage />*/}
+      <SinginForm />
     </div>
   );
 }
