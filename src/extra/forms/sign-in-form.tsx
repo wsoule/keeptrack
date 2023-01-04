@@ -4,7 +4,7 @@ export const SinginForm: FC = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleSubmit = (event: { preventDefault: () => void; }): void => {
+  const handleSubmit = (event: { preventDefault: () => void }): void => {
     event.preventDefault();
     console.log(username, password);
   };

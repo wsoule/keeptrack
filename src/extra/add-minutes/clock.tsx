@@ -59,6 +59,7 @@ const Button: FC<buttonProps> = ({ onClickFunction, number }) => {
   return <button onClick={onClickFunction}>{number}</button>;
 };
 
+
 const Result: FC<resultsProps> = ({ value }) => {
   return <div>Result: {value}</div>;
 };
